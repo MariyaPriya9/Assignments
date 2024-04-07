@@ -1,7 +1,7 @@
 # Print Hello world(Slide 22)
 print("Hello, World")
 
-
+#Small Change
 #Get the output for the following values(Slide 23)
 A <- 5
 B <- 10
