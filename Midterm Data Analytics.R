@@ -57,6 +57,18 @@ ggplot(data, aes(x=phd, y=fitted_probs)) +
   labs(title="Logistic Regression of High Salary on PhD",
        x="Years since PhD", y="Probability of Salary Above Median")
 
+ggplot(data, aes(x=phd, y=resid(linear_model))) +
+  geom_point() +
+  geom_hline(yintercept=0, linetype="dashed", color="red") +
+  labs(title="Residuals from Linear Model",
+       x="Years since PhD", y="Residuals",
+       caption="Data source: University Salary Data")
 
+ggplot(data, aes(x=sex, y=salary, fill=sex)) +
+  geom_boxplot() +
+  labs(title="Salary Distribution by Gender",
+       x="Gender", y="Salary",
+       fill="Gender",
+       caption="Data source: University Salary Data")
 
 
